@@ -13,7 +13,7 @@ services:
       - ./docker-volumes/cache:/data
   mongodb:
     container_name: mongodb_container
-    image: mongo:7.0-rc-jammy
+    image: mongo:6.0-focal
     restart: always
     ports:
       - 27017:27017
@@ -89,9 +89,11 @@ services:
     image: docker.elastic.co/kibana/kibana:8.11.0
     restart: always
     environment:
-      - ELASTICSEARCH_HOSTS=["http://elasticsearch_container:9200"]
-      - ELASTICSEARCH_USERNAME=elastic
-      - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+      ELASTICSEARCH_HOSTS: ${ELASTICSEARCH_HOSTS}
+      ELASTICSEARCH_USERNAME: ${ELASTICSEARCH_USERNAME}
+      ELASTICSEARCH_PASSWORD: ${ELASTICSEARCH_PASSWORD}
+      ELASTICSEARCH_SERVICEACCOUNT_TOKEN: ${ELASTICSEARCH_SERVICEACCOUNT_TOKEN}
+      XPACK_FLEET_AGENTS_ELASTICSEARCH_HOSTS: ${ELASTICSEARCH_HOSTS}
     ports:
       - 5601:5601
     volumes:
