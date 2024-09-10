@@ -1,6 +1,3 @@
-[submodule "9-jobber-shared"]
-	path = 9-jobber-shared
-	url = https://github.com/Juandavid9909/microservices-jobber-shared
 [submodule "server/9-jobber-shared"]
 	path = server/9-jobber-shared
 	url = https://github.com/Juandavid9909/microservices-jobber-shared
