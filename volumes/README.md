@@ -22,10 +22,10 @@ Es necesario ejecutar estos servicios primero para evitar errores al iniciar sus
 * Una vez que Elasticsearch esté en ejecución, abra la terminal del contenedor de Elasticsearch y cambie la contraseña de Kibana_system.
   * `curl -s -X POST -u elastic:admin1234 -H "Content-Type: application/json" http://localhost:9200/_security/user/kibana_system/_password -d "{\"password\":\"kibana\"}"`
   * Si la actualización fue exitosa, deberías ver un `{}` en la terminal.
-* También desde la terminal de contenedores de Elasticsearch, crea un token de servicio de Kibana
-  * `bin/elasticsearch-service-tokens create elastic/kibana jobber-kibana`
+* También desde la terminal de contenedores de Elasticsearch, crea un token de servicio de Kibana:
+  * `bin/elasticsearch-service-tokens create elastic/kibana jobber-kibana`.
   * Si se generó el token de cuenta de servicio, se mostrará.
-  * Una vez generado, cópialo y agrégalo a la variable de entorno de Kibana `ELASTICSEARCH_SERVICEACCOUNT_TOKEN` dentro de tu archivo de composición de Docker
+  * Una vez generado, cópialo y agrégalo a la variable de entorno de Kibana `ELASTICSEARCH_SERVICEACCOUNT_TOKEN` dentro de tu archivo de composición de Docker.
 
 
 # Archivo Heartbeat
