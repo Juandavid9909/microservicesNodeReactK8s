@@ -59,6 +59,8 @@ services:
       - 15672:15672
     volumes:
       - ./docker-volumes/postgres:/var/lib/postgresql
+    networks:
+      - elastic
   elasticsearch:
     container_name: elasticsearch_container
     image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
@@ -101,6 +103,20 @@ services:
       - elastic
     depends_on:
       - elasticsearch
+  notifications:
+    container_name: notification_container
+    build:
+      context: ../server/2-notification-service
+      dockerfile: Dockerfile.dev
+    restart: always
+    ports:
+      - 4001:4001
+    env_file: ../server/2-notification-service/.env
+    depends_on:
+      - elasticsearch
+      - rabbitmq
+    networks:
+      - elastic
 
 networks:
   elastic:
