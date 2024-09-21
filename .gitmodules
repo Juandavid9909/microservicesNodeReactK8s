@@ -4,3 +4,6 @@
 [submodule "server/2-notification-service"]
 	path = server/2-notification-service
 	url = https://github.com/Juandavid9909/microservices-jobber-notification.git
+[submodule "server/1-gateway-service"]
+	path = server/1-gateway-service
+	url = https://github.com/Juandavid9909/microservices-jobber-gateway.git
