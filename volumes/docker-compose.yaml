@@ -103,6 +103,19 @@ services:
       - elastic
     depends_on:
       - elasticsearch
+  gateway:
+    container_name: gateway_container
+    build:
+      context: ../server/1-gateway-service
+      dockerfile: Dockerfile.dev
+    restart: always
+    ports:
+      - 4000:4000
+    env_file: ../server/1-gateway-service/.env
+    depends_on:
+      - elasticsearch
+    networks:
+      - elastic
   notifications:
     container_name: notification_container
     build:
