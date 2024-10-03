@@ -7,3 +7,6 @@
 [submodule "server/1-gateway-service"]
 	path = server/1-gateway-service
 	url = https://github.com/Juandavid9909/microservices-jobber-gateway.git
+[submodule "server/3-auth-service"]
+	path = server/3-auth-service
+	url = https://github.com/Juandavid9909/microservices-jobber-auth.git
