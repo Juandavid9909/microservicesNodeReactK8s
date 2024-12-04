@@ -131,6 +131,22 @@ services:
     networks:
       - elastic
 
+  auth:
+    container_name: auth_container
+    build:
+      context: ../server/3-auth-service
+      dockerfile: Dockerfile.dev
+    restart: always
+    ports:
+      - 4002:4002
+    env_file: ../server/3-auth-service/.env
+    depends_on:
+      - elasticsearch
+      - rabbitmq
+      - mysql
+    networks:
+      - elastic
+
 networks:
   elastic:
     name: elastic
