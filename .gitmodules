@@ -10,3 +10,6 @@
 [submodule "server/3-auth-service"]
 	path = server/3-auth-service
 	url = https://github.com/Juandavid9909/microservices-jobber-auth.git
+[submodule "server/4-users-service"]
+	path = server/4-users-service
+	url = https://github.com/Juandavid9909/microservices-jobber-users.git

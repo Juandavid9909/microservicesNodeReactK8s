@@ -14,6 +14,8 @@ Es necesario ejecutar estos servicios primero para evitar errores al iniciar sus
 * `elasticsearch`
   * `docker compose up -d elasticsearch`
   * Puede tomar entre 5 a 10 minutos a elasticsearch para correr el contenedor.
+* Todos excepto los microservicios
+  * `docker compose up -d redis mongodb mysql postgres rabbitmq elasticsearch kibana`
 
 
 # Configurando Kibana
