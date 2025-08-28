@@ -11,11 +11,11 @@ elasticsearch.hosts: ["http://elasticsearch_container:9200"]
 monitoring.ui.container.elasticsearch.enabled: true
 xpack.fleet.enabled: true
 xpack.fleet.agents.enabled: true
-xpack.fleet.agents.elasticsearch.hosts: ["http://elasticsearch_container:9200"]
+xpack.fleet.agents.elasticsearch.hosts: ${ELASTICSEARCH_HOSTS}
 xpack.reporting.roles.enabled: true
 xpack.fleet.agentIdVerificationEnabled: false
-xpack.security.encryptionKey: fhjskloppd678ehkdfdlliverpoolfcr
-xpack.encryptedSavedObjects.encryptionKey: fhjskloppd678ehkdfdlliverpoolfcr
+xpack.security.encryptionKey: ${KIBANA_SECURITY_ENCRYPTION_KEY}
+xpack.encryptedSavedObjects.encryptionKey: ${KIBANA_ENCRYPTED_SAVED_OBJECTS_KEY}
 # xpack.reporting.kibanaServer.hostname: localhost
 
 ## Add policy for apm-server integration
