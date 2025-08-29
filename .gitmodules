@@ -1,3 +1,6 @@
 [submodule "server/9-jobber-shared"]
 	path = server/9-jobber-shared
 	url = https://github.com/Juandavid9909/jobber-shared
+[submodule "server/2-notification-service"]
+	path = server/2-notification-service
+	url = https://github.com/Juandavid9909/jobber-notification
