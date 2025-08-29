@@ -38,3 +38,14 @@ Es necesario ejecutar estos servicios primero para evitar errores al iniciar sus
 - Puede ejecutar los microservicios utilizando Docker Compose o abriendo una terminal para cada servicio y ejecutando `npm run dev`.
 - Personalmente, prefiero ejecutar los microservicios individualmente en la terminal porque me permite monitorear fácilmente los errores que se muestran.
 - Cualquiera sea el enfoque que desee utilizar para iniciar los microservicios, asegúrese de que el `servicio de puerta de enlace` sea siempre el último servicio que inicie. Todos los demás servicios deben estar ejecutándose antes de iniciar el `servicio de puerta de enlace`.
+
+# RabbitMQ
+
+Los métodos que tenemos disponibles para los Channels son:
+
+- `channel.publish` - Publica un mensaje a un exchange.
+- `channel.assertExchange` - Valida la existencia de un exchange.
+- `channel.assertQueue` - Verifica si una queue existe, si no existe crea una nueva.
+- `channel.bindQueue` - Crea un routing path desde un exchange a una queue.
+- `channel.consume` - Configura el consumer con un callback para ser invocado con cada mensaje.
+- `channel.ack` - Reconoce el mensaje recibido.
