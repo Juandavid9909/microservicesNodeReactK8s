@@ -10,7 +10,8 @@ xpack.fleet.agents.elasticsearch.hosts: ["http://elasticsearch_container:9200"]
 xpack.fleet.agents.fleet_server.hosts: ["http://fleet_server:9243"]
 xpack.reporting.roles.enabled: false
 
-xpack.encryptedSavedObjects.encryptionKey: "this-is-not-a-real-key-but-gets-the-job-done"
+xpack.security.encryptionKey: fhjskloppd678ehkdfdlliverpoolfcr
+xpack.encryptedSavedObjects.encryptionKey: fhjskloppd678ehkdfdlliverpoolfcr
 
 ## Add policy for apm-server integration
 xpack.fleet.packages:
@@ -23,8 +24,11 @@ xpack.fleet.agentPolicies:
     monitoring_enabled:
       - logs
       - metrics
-    packages_policies:
+    package_policies:
       - name: apm-1
         id: default-apm
         package:
           name: apm
+
+## Misc
+elasticsearch.requestTimeout: 90000
