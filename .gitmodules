@@ -1,3 +1,6 @@
 [submodule "services/9-jobber-shared"]
 	path = services/9-jobber-shared
 	url = https://github.com/Juandavid9909/microservices-jobber-shared.git
+[submodule "services/2-notification-service"]
+	path = services/2-notification-service
+	url = https://github.com/Juandavid9909/microservices-jobber-notification.git
