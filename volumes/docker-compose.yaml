@@ -50,6 +50,9 @@ services:
     container_name: rabbitmq_container
     image: rabbitmq:4.3.6-management-alpine
     restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
     ports:
       # AMQP protocol port
       - 5672:5672
